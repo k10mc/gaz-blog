@@ -1,6 +1,22 @@
 <html>
 <body>
-    <p>Hi there! Ish Lit</p>
-    <p>For the gang</p>
+    
+    <div>
+        <h1><a href="/">Gaz Industries</a></h1>
+    </div>
+
+    <div>
+        <p>Hi there! Ish Lit</p>
+        <p>For the gang</p>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+    
 </body>
 </html>
